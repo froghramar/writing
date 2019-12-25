@@ -1,6 +1,9 @@
 name: Deploy Github Pages
 
-on: [push]
+on:
+  push:
+    branches:
+      - dev
 
 jobs:
   deploy:
@@ -13,3 +16,5 @@ jobs:
       uses: benmatselby/hugo-deploy-gh-pages@1.1.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        HUGO_VERSION: 0.62.0
+        TARGET_REPO: froghramar/hugo-starter
