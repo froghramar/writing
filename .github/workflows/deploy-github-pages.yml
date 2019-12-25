@@ -18,3 +18,4 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         HUGO_VERSION: 0.62.0
         TARGET_REPO: froghramar/hugo-starter
+        HUGO_ARGS: '--destination build'
