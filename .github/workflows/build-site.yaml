@@ -1,0 +1,19 @@
+name: Build site
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v1
+    
+    - name: Build site
+      uses: kevvurs/action-hugo@v1.0-rc2
