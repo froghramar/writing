@@ -3,7 +3,9 @@ name: Deploy Github Pages
 on:
   push:
     branches:
-      - dev
+      - master
+    paths-ignore:
+      - .github/*
 
 jobs:
   deploy:
@@ -11,12 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout
+      uses: actions/checkout@v1
       
-    - name: Action Hugo
+    - name: Build site
       uses: kevvurs/action-hugo@v1.0-rc2
       
-    - name: GitHub Pages Deploy
+    - name: Deploy github pages
       uses: maxheld83/ghpages@v0.2.1
       env:
         BUILD_DIR: "public/"

@@ -20,6 +20,3 @@ jobs:
     
     - name: Build site
       uses: kevvurs/action-hugo@v1.0-rc2
-
-
-      
