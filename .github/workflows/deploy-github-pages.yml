@@ -12,8 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build Hugo site
-      uses: srt32/hugo-action@master
+      
+    - name: Action Hugo
+      uses: kevvurs/action-hugo@v1.0-rc2
+      
     - name: GitHub Pages Deploy
       uses: maxheld83/ghpages@v0.2.1
       env:
