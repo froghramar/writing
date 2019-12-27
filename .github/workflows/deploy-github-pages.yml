@@ -8,19 +8,41 @@ on:
       - .github/**
 
 jobs:
-  deploy:
 
+  build-site:
+
+    name: Build site
     runs-on: ubuntu-latest
 
     steps:
+    
     - name: Checkout
       uses: actions/checkout@v1
       
     - name: Build site
       uses: kevvurs/action-hugo@v1.0-rc2
-      
+    
+    - name: Publish build artifact
+      uses: actions/upload-artifact@v1
+      with:
+        name: site
+        path: public
+  
+  deploy_site:
+    
+    name: Deploy site
+    needs: build_site
+    runs-on: ubuntu-latest
+    
+    steps:
+    
+    - name: Download build artifact
+      uses: actions/download-artifact@v1
+      with:
+        name: site
+    
     - name: Deploy github pages
       uses: maxheld83/ghpages@v0.2.1
       env:
-        BUILD_DIR: "public/"
+        BUILD_DIR: site/
         GH_PAT: ${{ secrets.GH_PAT }}
