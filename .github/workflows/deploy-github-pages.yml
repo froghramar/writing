@@ -34,7 +34,7 @@ jobs:
   deploy_site:
     
     name: Deploy site
-    needs: build-
+    needs: build-site
     if: success() && github.event == 'push'
     runs-on: ubuntu-latest
     
