@@ -9,3 +9,4 @@ promising. Hugo CLI seems to be simple enough to use and one can focus on the co
 what a tool can offer.
 
 Some additional information.
+New trigger content.
