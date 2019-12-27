@@ -6,6 +6,9 @@ on:
       - master
     paths-ignore:
       - .github/**
+  pull_request:
+    branches:
+      - master
 
 jobs:
 
@@ -32,6 +35,7 @@ jobs:
     
     name: Deploy site
     needs: build-site
+    if: success() && github.event == 'push'
     runs-on: ubuntu-latest
     
     steps:
