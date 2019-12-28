@@ -37,7 +37,7 @@ jobs:
     
     name: Deploy site
     needs: build-site
-    if: success() && $GITHUB_EVENT_NAME == 'push'
+    if: success() && github.event == 'push'
     runs-on: ubuntu-latest
     
     steps:
