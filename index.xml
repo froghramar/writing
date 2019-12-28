@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feroz Ahmmed</title>
+    <link>https://froghramar.github.io/writing/</link>
+    <description>Recent content on Feroz Ahmmed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Dec 2019 18:37:21 +0600</lastBuildDate>
+    
+	<atom:link href="https://froghramar.github.io/writing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Exploring Hugo</title>
+      <link>https://froghramar.github.io/writing/posts/exploring-hugo/</link>
+      <pubDate>Wed, 25 Dec 2019 18:37:21 +0600</pubDate>
+      
+      <guid>https://froghramar.github.io/writing/posts/exploring-hugo/</guid>
+      <description>Today I started to explore the tool hugo mostly to check if it is worth to use. As a first impression it looks promising. Hugo CLI seems to be simple enough to use and one can focus on the content rather than thinking about what a tool can offer.</description>
+    </item>
+    
+  </channel>
+</rss>
