@@ -17,6 +17,10 @@ jobs:
 
     steps:
     
+    - name: Test print
+      run:
+        echo $GITHUB_EVENT_NAME
+    
     - name: Checkout
       uses: actions/checkout@v1
       
@@ -33,7 +37,7 @@ jobs:
     
     name: Deploy site
     needs: build-site
-    if: success() && github.event == 'push'
+    if: success() && $GITHUB_EVENT_NAME == 'push'
     runs-on: ubuntu-latest
     
     steps:
